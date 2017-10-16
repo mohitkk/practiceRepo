@@ -5,21 +5,19 @@ public static void main(String args[]){
   print(obj);
 }
 
-public static void print(Object obj){
-    System.out.println(obj);
-}
+
 
 private static class PrivateTestClass {
-    String name;
-    String value;
+    String namee;
+    String valuee;
     private static PrivateTestClass instance ;
     static boolean isInitialized;
     private PrivateTestClass() {
 
     }
     private PrivateTestClass (String name, String value){
-      this.name = name;
-      this.value = value;
+      this.namee = name;
+      this.valuee = value;
     }
     public static PrivateTestClass getInstance (){
       if (!isInitialized){
@@ -33,7 +31,11 @@ private static class PrivateTestClass {
 
     @Override
     public String toString(){
-      return this.name+" "+this.value;
+      return this.name+"     "+this.value;
     }
+}
+
+public static void print(Object obj){
+    System.out.println(obj);
 }
 }
